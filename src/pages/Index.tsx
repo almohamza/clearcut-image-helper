@@ -1,10 +1,20 @@
 
 import { ImageUploader } from "@/components/ImageUploader";
 import { motion } from "framer-motion";
+import { NavBar } from "@/components/ui/tubelight-navbar";
+import { Home, User, Briefcase, FileText } from 'lucide-react';
+
+const navItems = [
+  { name: 'Home', url: '/', icon: Home },
+  { name: 'About', url: '/about', icon: User },
+  { name: 'Projects', url: '/projects', icon: Briefcase },
+  { name: 'Resume', url: '/resume', icon: FileText }
+];
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <NavBar items={navItems} />
       <div className="container mx-auto px-4 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
