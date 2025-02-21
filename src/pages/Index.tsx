@@ -2,20 +2,21 @@
 import { ImageUploader } from "@/components/ImageUploader";
 import { motion } from "framer-motion";
 import { NavBar } from "@/components/ui/tubelight-navbar";
-import { Home, User, Briefcase, FileText } from 'lucide-react';
+import { Home, Settings, Laptop, Tool } from 'lucide-react';
+import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 
 const navItems = [
   { name: 'Home', url: '/', icon: Home },
-  { name: 'About', url: '/about', icon: User },
-  { name: 'Projects', url: '/projects', icon: Briefcase },
-  { name: 'Resume', url: '/resume', icon: FileText }
+  { name: 'About', url: '/about', icon: Settings },
+  { name: 'Features', url: '/features', icon: Laptop },
+  { name: 'Other tools', url: '/tools', icon: Tool }
 ];
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <NavBar items={navItems} />
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 mt-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -85,6 +86,7 @@ const Index = () => {
           </div>
         </motion.div>
       </div>
+      <StackedCircularFooter />
     </div>
   );
 };
