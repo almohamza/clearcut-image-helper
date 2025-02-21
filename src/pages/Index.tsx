@@ -2,14 +2,14 @@
 import { ImageUploader } from "@/components/ImageUploader";
 import { motion } from "framer-motion";
 import { NavBar } from "@/components/ui/tubelight-navbar";
-import { Home, Settings, Laptop, Tool } from 'lucide-react';
+import { Home, Settings, Laptop, Wrench } from 'lucide-react';
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 
 const navItems = [
   { name: 'Home', url: '/', icon: Home },
   { name: 'About', url: '/about', icon: Settings },
   { name: 'Features', url: '/features', icon: Laptop },
-  { name: 'Other tools', url: '/tools', icon: Tool }
+  { name: 'Other tools', url: '/tools', icon: Wrench }
 ];
 
 const Index = () => {
